@@ -25,3 +25,7 @@ export function isArray(param) {
 export function isFunction(param) {
   return typeof param === "function";
 }
+
+export function isDate(param) {
+  return param instanceof Date;
+}
