@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import classnames from "classnames";
-import { isFunction } from "lodash";
+import clsx from "clsx";
+import { isFunction } from "../../utils/type";
 
 import './index.less'
 
@@ -42,7 +42,7 @@ const AutoDecoratableEllipsis: React.FC<IAutoDecoratableEllipsis> = ({
                 width,
                 WebkitLineClamp: applyEllipsisClass ? rowNum : undefined
             }}
-            className={classnames(["auto-decoratable-ellipsis", { ellipsis: applyEllipsisClass }])}
+            className={clsx(["auto-decoratable-ellipsis", { ellipsis: applyEllipsisClass }])}
         >
             {text}
         </div>
